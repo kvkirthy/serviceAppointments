@@ -1,0 +1,42 @@
+.row {
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+.a-row{
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin: 5px 5px 5px 5px;
+  min-height: 150px;
+  max-height: 150px;
+  background-color: #eee;
+  border: 1px solid #ddd;
+  background-color: rgba(86,61,124,.15);
+  border: 1px solid rgba(86,61,124,.2);
+}
+.tightCell{
+/*	padding-left: 1px;
+	padding-right: 1px; */
+	/*margin-left: 1px;*/
+}
+
+select{
+  min-width: 200px;
+  max-width: 200px
+}
+
+input
+{
+-moz-border-radius:10px; /* Firefox */
+-webkit-border-radius: 10px; /* Safari, Chrome */
+-khtml-border-radius: 10px; /* KHTML */
+border-radius: 10px; /* CSS3 */
+behavior:url("border-radius.htc");
+}
+
+.go-button{
+    background:url(/resources/images/arrow-right.png) no-repeat;
+    cursor:pointer;
+    width: 50px;
+    height: 25px;
+    border: none;
+}

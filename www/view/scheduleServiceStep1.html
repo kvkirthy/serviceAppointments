@@ -1,0 +1,53 @@
+<div class="container">
+	<div class="row">
+		<div class="col-xs-12"><small>Make:</small> </div>
+		<div class="col-xs-12">
+			<select ng-model="selectedMake" ng-options="m as m for m in makes" ng-change="getModels(selectedMake)"></select>
+		</div>
+	</div>
+
+	<div ng-show="isModelDropdownVisible">
+	
+	<div class="row">
+		<div class="col-xs-12"> 
+			<small>Model:</small>
+		</div>
+		<div class="col-xs-12">
+		 <select ng-model="selectedModel" ng-options="m as m for m in models"></select>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-xs-12"> 
+			<small>Year:</small>
+		</div>
+		<div class="col-xs-12">	
+			<select ng-model="selectedYear" ng-change="isServiceOptionsVisible=true" ng-options="y as y for y in years"></select>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-xs-12"> 
+			<hr/>
+		</div>
+	</div>
+
+	<div class="row" ng-show="isServiceOptionsVisible">
+		<div ng-repeat="option in serviceOptions">
+			<div class="col-xs-12">
+				<input type="checkbox" value="{{option.value}}" ng-checked="option.isSelected"> {{option.value}} </input>
+			</div>			
+		</div>		
+		<div class="col-xs-12"><br/><small>Comments:</small></div>
+		<div class="col-xs-12">			
+			<textarea type="textarea" row="15" style="width:100%" ng-model="serviceComments"> </textarea>
+		</div>
+	</div>
+
+	<div class="row" ng-show="isServiceOptionsVisible">
+		<div class="col-xs-12"><br/><small>Apointment date and time:</small></div>
+		<div class="col-xs-12">{{apointmentDateAndTime}}</div>
+	</div>
+
+	</div>
+
+	</div>
+</div>
